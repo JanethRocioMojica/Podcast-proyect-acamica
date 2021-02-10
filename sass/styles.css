@@ -21,6 +21,10 @@ h1, h2, h3, h4, h5, h6, p {
 a {
   text-decoration: none;
   cursor: pointer;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .header {
@@ -99,6 +103,14 @@ a {
   border: none;
   font-weight: 600;
   font-family: 'IBM Plex Mono', monospace;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn-primary:hover {
+  background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+  color: #ffffff;
 }
 
 .background-blue {
@@ -123,6 +135,13 @@ a {
   padding: 0 16px;
   margin-top: 30px;
   margin-bottom: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .welcome-section .tittle {
@@ -166,8 +185,15 @@ a {
   line-height: 0;
 }
 
-.podcasts .podcast-container:last-child {
-  margin-bottom: 0;
+.podcasts .iframe {
+  width: 100%;
+  height: 232px;
+  background-color: transparent;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  -o-border-image: initial;
+     border-image: initial;
 }
 
 .about-us .image-container {
@@ -231,6 +257,21 @@ a {
     top: auto;
     padding: 0;
   }
+  .header .links-menu .list-menu nav, .header .links-menu .list-menu ul, .header .links-menu .list-menu li {
+    display: inline-block;
+  }
+  .header .links-menu .list-menu nav, .header .links-menu .list-menu ul, .header .links-menu .list-menu li, .header .links-menu .list-menu a:hover {
+    color: #00F3BB;
+    -webkit-transition: .1s;
+    transition: .1s;
+  }
+  .header .links-menu .list-menu nav, .header .links-menu .list-menu ul, .header .links-menu .list-menu li, .header .links-menu .list-menu a:hover:after {
+    -webkit-transform: translateX(1) scaleX(20%);
+    transform: translateX(1) scaleX(20%);
+  }
+  .header .links-menu .list-menu a:hover {
+    text-decoration: line-through;
+  }
   .header .links-menu .list-menu .link-menu {
     color: #060A24;
     padding-bottom: 0;
@@ -256,11 +297,18 @@ a {
     margin-bottom: 56px;
     width: 628px;
   }
+  .welcome-section span {
+    color: #0000EC;
+  }
   .btn-primary {
     width: 220px;
     height: 56px;
     min-width: 220px;
     font-size: 18px;
+  }
+  .btn-primary:hover {
+    background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+    color: #ffffff;
   }
   .podcasts {
     padding: 125px 100px 200px;
@@ -291,6 +339,7 @@ a {
         flex-wrap: wrap;
     margin: -36px;
     max-width: 1440px;
+    width: 100%;
   }
   .podcasts .podcast-container {
     width: 50%;
