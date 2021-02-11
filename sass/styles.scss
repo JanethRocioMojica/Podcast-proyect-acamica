@@ -215,6 +215,38 @@ a {
 }
 //section about us terminado
 
+//section gallery inicio
+.gallery {
+    position: relative;
+    margin-bottom: 0;
+    .tittle,
+    .content-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        z-index: 2;
+        max-width: 420px;
+        width: auto;
+    }
+    .tittle {
+        margin-bottom: 5px;
+        padding: 20px;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-weight: 400;
+        font-size: 36px;
+        color: #060A24;
+        line-height: 42px;
+    }
+    .individual-gallery {
+        margin-bottom: 0;
+        position: relative;
+        line-height: 10px;
+    }
+    .one-gallery {
+        width: 100%;
+    }
+}
+//section gallery terminado
+
 //media queries
 @media (min-width: 1280px){
     //header inicio
@@ -330,6 +362,7 @@ a {
     }
     //podcasts terminado
 
+    //section about-us iniciado
     .about-us {
         max-width: 1000px;
         margin: -120px auto 0;
@@ -356,4 +389,45 @@ a {
             }
         }
     }
+    //section about-us terminado
+
+    //section gallery inicio
+    .gallery {
+        position: relative;
+        padding: 50px 0px 140px;
+        &::after {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 130px 200px 480px;
+        } 
+        .tittle,
+        .content-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1440px;
+            width: auto;
+            
+        }
+        .tittle {
+            max-width: 1440px;
+            padding-left: 100px;
+            font-size: 48px;
+            color: #060A24;
+            line-height: 48px;
+            width: 100%;
+            margin-bottom: 26px;
+        }
+        .individual-gallery {
+            position: relative;
+            margin-bottom: 0;
+            line-height: 0;
+            width: 33%;
+            
+        }
+        .one-gallery {
+            width: 100%;
+        }
+    }
+    //section gallery terminado
 }
